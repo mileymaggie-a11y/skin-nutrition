@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anti-Inflammatory Foods | Complexions on the Hill</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sage:#7d9b76;--sage-light:#a8bf9f;--sage-dark:#4f6b4a;
+  --cream:#f7f3ee;--warm-white:#fdfaf6;--text-dark:#2e2a25;--text-mid:#5a524a;--text-light:#9a8f84;
+  --border:rgba(125,155,118,0.25);
+  --teal:#0F6E56;--teal-light:#E1F5EE;
+  --coral:#993C1D;--coral-light:#FAECE7;
+  --green:#3B6D11;--green-light:#EAF3DE;
+  --purple:#534AB7;--purple-light:#EEEDFE;
+  --amber:#854F0B;--amber-light:#FAEEDA;
+  --red:#A32D2D;--red-light:#FCEBEB;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text-dark);}
+.header{background:var(--warm-white);border-bottom:1px solid var(--border);padding:15px 28px;display:flex;align-items:center;gap:13px;}
+.header-logo{width:46px;height:46px;background:linear-gradient(135deg,var(--sage),var(--sage-dark));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+.header-text h1{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;}
+.header-text p{font-size:10px;color:var(--text-light);letter-spacing:1.3px;text-transform:uppercase;margin-top:2px;font-weight:300;}
+.hero{text-align:center;padding:40px 24px 28px;max-width:680px;margin:0 auto;}
+.eyebrow{font-size:10.5px;color:var(--sage-dark);letter-spacing:2px;text-transform:uppercase;font-weight:500;margin-bottom:10px;}
+.hero h2{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,4.5vw,38px);font-weight:300;line-height:1.2;margin-bottom:10px;}
+.hero h2 em{color:var(--sage-dark);font-style:italic;}
+.hero p{font-size:13.5px;color:var(--text-mid);font-weight:300;line-height:1.7;margin-bottom:14px;}
+.hint-pill{display:inline-flex;align-items:center;gap:7px;background:rgba(125,155,118,0.1);border:1px solid var(--sage-light);border-radius:40px;padding:7px 16px;font-size:12px;color:var(--sage-dark);}
+.page{max-width:700px;margin:0 auto;padding:0 20px 60px;}
+.section-label{text-align:center;font-size:11px;color:var(--text-light);letter-spacing:2px;text-transform:uppercase;margin:28px 0 16px;position:relative;}
+.section-label span{display:inline-block;padding:0 12px;background:var(--cream);position:relative;z-index:1;}
+.section-label::before{content:'';position:absolute;left:0;right:0;top:50%;height:1px;background:var(--border);}
+.food-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;}
+@media(max-width:500px){.food-row{grid-template-columns:1fr;}}
+.food-card{border-radius:12px;padding:16px 18px;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s;border:1.5px solid;position:relative;user-select:none;}
+.food-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.1);}
+.food-card:active{transform:translateY(-1px);}
+.food-card .arrow{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:16px;opacity:0.45;}
+.food-card h3{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;margin-bottom:4px;}
+.food-card .benefit{font-size:11.5px;font-weight:400;margin-bottom:3px;}
+.food-card .sources{font-size:11px;font-weight:300;font-style:italic;}
+.food-card .tap{font-size:10px;opacity:0.6;margin-top:6px;font-style:italic;}
+.card-teal{background:var(--teal-light);border-color:var(--teal);}
+.card-teal h3,.card-teal .tap{color:#085041;}
+.card-teal .benefit{color:var(--teal);}
+.card-teal .sources{color:#1D9E75;}
+.card-coral{background:var(--coral-light);border-color:var(--coral);}
+.card-coral h3,.card-coral .tap{color:#712B13;}
+.card-coral .benefit{color:var(--coral);}
+.card-coral .sources{color:#D85A30;}
+.card-green{background:var(--green-light);border-color:var(--green);}
+.card-green h3,.card-green .tap{color:#27500A;}
+.card-green .benefit{color:var(--green);}
+.card-green .sources{color:#639922;}
+.card-purple{background:var(--purple-light);border-color:var(--purple);}
+.card-purple h3,.card-purple .tap{color:#3C3489;}
+.card-purple .benefit{color:var(--purple);}
+.card-purple .sources{color:#7F77DD;}
+.card-amber{background:var(--amber-light);border-color:var(--amber);}
+.card-amber h3,.card-amber .tap{color:#633806;}
+.card-amber .benefit{color:var(--amber);}
+.card-amber .sources{color:#BA7517;}
+.card-red{background:var(--red-light);border-color:var(--red);}
+.card-red h3,.card-red .tap{color:#791F1F;}
+.card-red .benefit{color:var(--red);}
+.card-red .sources{color:#E24B4A;}
+.maggie-note{border-left:3px solid var(--sage);background:rgba(125,155,118,0.06);border-radius:0 12px 12px 0;padding:16px 20px;margin-top:24px;}
+.maggie-note .label{font-size:9.5px;color:var(--sage-dark);letter-spacing:1.5px;text-transform:uppercase;font-weight:500;margin-bottom:6px;}
+.maggie-note .text{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:var(--text-dark);line-height:1.65;}
+.footer-card{background:var(--warm-white);border:1px solid var(--border);border-left:3px solid var(--sage);border-radius:12px;padding:20px 24px;margin-top:28px;}
+.footer-card .label{font-size:10px;color:var(--sage-dark);letter-spacing:1.5px;text-transform:uppercase;font-weight:500;margin-bottom:7px;}
+.footer-card .quote{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:var(--text-dark);line-height:1.65;margin-bottom:16px;}
+.footer-btns{display:flex;flex-wrap:wrap;gap:10px;}
+.footer-btn{display:inline-flex;align-items:center;padding:11px 22px;border-radius:40px;font-family:'Jost',sans-serif;font-size:11px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer;text-decoration:none;transition:all 0.2s;border:none;}
+.footer-btn.primary{background:var(--sage-dark);color:white;}
+.footer-btn.ghost{background:transparent;color:var(--sage-dark);border:1.5px solid var(--sage-dark);}
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(46,42,37,0.6);z-index:9999;align-items:center;justify-content:center;padding:20px;}
+.modal-overlay.open{display:flex;}
+.modal{background:var(--warm-white);border-radius:20px;max-width:520px;width:100%;max-height:88vh;overflow-y:auto;}
+.modal-bar{height:6px;border-radius:20px 20px 0 0;}
+.modal-body{padding:26px 26px 30px;}
+.modal-eyebrow{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:500;margin-bottom:7px;}
+.modal-title{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;margin-bottom:12px;line-height:1.25;}
+.modal-desc{font-size:13.5px;color:var(--text-mid);font-weight:300;line-height:1.75;margin-bottom:16px;}
+.modal-why{font-size:9.5px;color:var(--sage-dark);letter-spacing:1.5px;text-transform:uppercase;font-weight:500;margin-bottom:8px;}
+.modal-points{display:flex;flex-direction:column;gap:9px;margin-bottom:20px;}
+.modal-point{display:flex;gap:10px;align-items:flex-start;}
+.modal-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;margin-top:5px;}
+.modal-pt{font-size:13px;color:var(--text-mid);font-weight:300;line-height:1.6;}
+.modal-sources-box{background:rgba(125,155,118,0.06);border-radius:10px;padding:12px 14px;margin-bottom:18px;}
+.modal-sources-lbl{font-size:9.5px;color:var(--sage-dark);letter-spacing:1.5px;text-transform:uppercase;font-weight:500;margin-bottom:6px;}
+.modal-sources-txt{font-size:13px;color:var(--text-mid);font-weight:300;line-height:1.7;}
+.modal-note-box{border-left:3px solid var(--sage);background:rgba(125,155,118,0.06);border-radius:0 10px 10px 0;padding:13px 16px;margin-bottom:18px;}
+.modal-note-lbl{font-size:9px;color:var(--sage-dark);letter-spacing:1.5px;text-transform:uppercase;font-weight:500;margin-bottom:5px;}
+.modal-note-txt{font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;color:var(--text-dark);line-height:1.6;}
+.modal-close-btn{width:100%;padding:13px;border:none;border-radius:40px;font-family:'Jost',sans-serif;font-size:11.5px;font-weight:500;letter-spacing:1.4px;text-transform:uppercase;cursor:pointer;color:white;}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-logo">✦</div>
+  <div class="header-text">
+    <h1>Complexions on the Hill</h1>
+    <p>Maggie Miley Kelly · Licensed Esthetician · Educator · Author</p>
+  </div>
+</div>
+
+<div class="hero">
+  <p class="eyebrow">Your Skin on Stress · Nutrition</p>
+  <h2>Anti-Inflammatory Foods<br>for the <em>Complexion</em></h2>
+  <p>What you eat is one of the most direct influences on your skin. Every meal either promotes or reduces the inflammation that drives most persistent skin concerns.</p>
+  <span class="hint-pill">✦ Tap any card to learn more</span>
+</div>
+
+<div class="page">
+
+  <div class="section-label" style="margin-top:4px;"><span>Foods that calm and heal</span></div>
+
+  <div class="food-row">
+    <div class="food-card card-teal" id="card-omega3">
+      <div class="arrow">→</div>
+      <h3>Omega-3 fatty acids</h3>
+      <div class="benefit">Reduce inflammatory cytokines</div>
+      <div class="sources">Salmon · sardines · walnuts · flaxseed</div>
+      <div class="tap">Tap to learn more →</div>
+    </div>
+    <div class="food-card card-coral" id="card-antioxidants">
+      <div class="arrow">→</div>
+      <h3>Antioxidants</h3>
+      <div class="benefit">Neutralize free radicals · protect collagen</div>
+      <div class="sources">Blueberries · kale · bell peppers · tomatoes</div>
+      <div class="tap">Tap to learn more →</div>
+    </div>
+  </div>
+
+  <div class="food-row">
+    <div class="food-card card-green" id="card-probiotics">
+      <div class="arrow">→</div>
+      <h3>Probiotics + prebiotics</h3>
+      <div class="benefit">Restore gut microbiome balance</div>
+      <div class="sources">Yogurt · kefir · kimchi · sauerkraut</div>
+      <div class="tap">Tap to learn more →</div>
+    </div>
+    <div class="food-card card-purple" id="card-polyphenols">
+      <div class="arrow">→</div>
+      <h3>Polyphenols</h3>
+      <div class="benefit">Reduce UV damage · improve elasticity</div>
+      <div class="sources">Green tea · berries · olive oil · dark chocolate</div>
+      <div class="tap">Tap to learn more →</div>
+    </div>
+  </div>
+
+  <div class="food-row">
+    <div class="food-card card-amber" id="card-zinc">
+      <div class="arrow">→</div>
+      <h3>Zinc</h3>
+      <div class="benefit">Regulates oil · supports wound healing</div>
+      <div class="sources">Pumpkin seeds · oysters · chickpeas</div>
+      <div class="tap">Tap to learn more →</div>
+    </div>
+    <div class="food-card card-coral" id="card-vitaminc">
+      <div class="arrow">→</div>
+      <h3>Vitamin C</h3>
+      <div class="benefit">Essential for collagen synthesis</div>
+      <div class="sources">Bell peppers · citrus · kiwi · broccoli</div>
+      <div class="tap">Tap to learn more →</div>
+    </div>
+  </div>
+
+  <div class="section-label" style="margin-top:24px;"><span>Foods that drive skin inflammation</span></div>
+
+  <div class="food-card card-red" id="card-avoid" style="margin-bottom:0;">
+    <div class="arrow">→</div>
+    <h3>Minimize for clearer skin</h3>
+    <div class="benefit">Pro-inflammatory foods that worsen most skin conditions</div>
+    <div class="sources">Refined sugar · processed seed oils · ultra-processed foods · excessive dairy · alcohol</div>
+    <div class="tap">Tap to understand why →</div>
+  </div>
+
+  <div class="maggie-note">
+    <div class="label">✦ Maggie's note</div>
+    <div class="text">You do not need to eat perfectly. You need to eat consistently well. Start with one addition per day — one probiotic food, one handful of walnuts, one extra serving of color. Let it build from there.</div>
+  </div>
+
+  <div class="footer-card">
+    <div class="label">✦ Continue Your Journey</div>
+    <div class="quote">"Your topical skincare routine tends the garden from the outside. Nutrition tends it from the roots."</div>
+    <div class="footer-btns">
+      <a class="footer-btn primary" href="https://www.schedulicity.com/scheduling/COCGMW" target="_blank">Book a Consultation</a>
+      <a class="footer-btn ghost" href="https://complexionsonthehill.com" target="_blank">Visit My Website</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <div class="modal-bar" id="modalBar"></div>
+    <div class="modal-body">
+      <div class="modal-eyebrow" id="modalEyebrow"></div>
+      <div class="modal-title" id="modalTitle"></div>
+      <div class="modal-desc" id="modalDesc"></div>
+      <div class="modal-why">Why it works</div>
+      <div class="modal-points" id="modalPoints"></div>
+      <div class="modal-sources-box">
+        <div class="modal-sources-lbl">Best food sources</div>
+        <div class="modal-sources-txt" id="modalSources"></div>
+      </div>
+      <div class="modal-note-box">
+        <div class="modal-note-lbl">✦ A note from Maggie</div>
+        <div class="modal-note-txt" id="modalMaggie"></div>
+      </div>
+      <button class="modal-close-btn" id="modalClose">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+var content = {
+  omega3: {
+    color:'#0F6E56',bar:'linear-gradient(90deg,#0F6E56,#1D9E75)',
+    eyebrow:'Anti-inflammatory nutrition',
+    title:'Omega-3 fatty acids',
+    desc:'Omega-3 fatty acids are among the most powerful anti-inflammatory nutrients available — working at the cellular level to interrupt the inflammation cascade that drives acne, eczema, rosacea and accelerated aging.',
+    points:['EPA and DHA compete with pro-inflammatory omega-6 fatty acids for the same enzymes, reducing the production of inflammatory prostaglandins and cytokines throughout the body.','EPA directly suppresses TNF-alpha, IL-1 and IL-6 — the cytokines elevated in inflammatory skin conditions and released by mast cells during a stress response.','DHA is incorporated into cell membranes, making skin cells more resilient and supporting barrier integrity — directly reducing transepidermal water loss.','Omega-3s stimulate the production of resolvins and protectins — compounds that actively resolve existing inflammation rather than simply suppressing it.'],
+    sources:'Salmon · sardines · mackerel · anchovies · herring · oysters · walnuts · ground flaxseed · chia seeds · hemp seeds · algae-based supplements',
+    maggie:'For clients with persistently inflamed skin, I often recommend a high-quality EPA/DHA supplement alongside dietary sources. Two to three servings of fatty fish per week creates measurable change in skin inflammation within eight to twelve weeks.'
+  },
+  antioxidants: {
+    color:'#993C1D',bar:'linear-gradient(90deg,#993C1D,#D85A30)',
+    eyebrow:'Anti-inflammatory nutrition',
+    title:'Antioxidants',
+    desc:'Antioxidants neutralize free radicals — unstable molecules generated by UV exposure, pollution, stress and metabolic processes — that damage skin cells, degrade collagen and accelerate the visible signs of aging.',
+    points:['Free radical damage is one of the primary drivers of premature aging, hyperpigmentation and chronic skin inflammation.','Vitamin C is essential for collagen synthesis and cannot be produced by the body — dietary intake directly determines the skin\'s ability to build and maintain collagen.','Vitamin E works synergistically with vitamin C, protecting cell membranes from oxidative damage and supporting barrier function.','Beta-carotene and lycopene — found in orange, red and yellow vegetables — protect against UV-induced skin damage and improve skin tone over time.'],
+    sources:'Blueberries · pomegranate · strawberries · kale · spinach · bell peppers · tomatoes · sweet potato · carrots · citrus · green tea',
+    maggie:'I always tell clients: eat the rainbow. The deeper the color of a fruit or vegetable, the higher its antioxidant content. Make your plate as colorful as possible and your skin will show it.'
+  },
+  probiotics: {
+    color:'#3B6D11',bar:'linear-gradient(90deg,#3B6D11,#639922)',
+    eyebrow:'Anti-inflammatory nutrition',
+    title:'Probiotics & prebiotics',
+    desc:'Probiotic and prebiotic foods nourish the gut microbiome — the trillions of microorganisms that regulate immune function, produce neurotransmitters and directly govern the systemic inflammation that shows up on your skin.',
+    points:['70% of the immune system lives in the gut — when the microbiome is dysregulated, immune dysregulation follows, and inflamed skin is often the result.','Lactobacillus strains have been shown to reduce the severity of acne, rosacea and eczema within 8 to 12 weeks of consistent use.','Prebiotic foods feed beneficial bacteria — without prebiotics, probiotics cannot thrive. Both are essential for a resilient microbiome.','A healthy gut microbiome produces short-chain fatty acids that reduce intestinal permeability, decreasing the systemic inflammation that drives skin flares.'],
+    sources:'Probiotic: live yogurt · kefir · kimchi · sauerkraut · kombucha · miso · tempeh\nPrebiotic: garlic · onion · leeks · asparagus · oats · bananas',
+    maggie:'Before you add another product to your skincare routine, add one probiotic food to your day. The results will show on your skin before they show anywhere else.'
+  },
+  polyphenols: {
+    color:'#534AB7',bar:'linear-gradient(90deg,#534AB7,#7F77DD)',
+    eyebrow:'Anti-inflammatory nutrition',
+    title:'Polyphenols',
+    desc:'Polyphenols are plant compounds with powerful anti-inflammatory, antioxidant and photoprotective properties — shown to reduce UV-induced skin damage, lower inflammatory markers and improve skin elasticity.',
+    points:['EGCG in green tea reduces inflammation, inhibits UV-induced DNA damage and suppresses the enzymes that break down collagen.','Resveratrol in red grapes activates sirtuins — proteins associated with cellular longevity and protection against oxidative stress.','Oleocanthal in extra virgin olive oil has natural anti-inflammatory activity similar to ibuprofen, providing genuine systemic anti-inflammatory effects.','Anthocyanins in berries reduce neuroinflammation that amplifies the skin stress response.'],
+    sources:'Green tea · matcha · blueberries · blackberries · cherries · dark chocolate (70%+) · extra virgin olive oil · red grapes · pomegranate',
+    maggie:'Green tea is one of the simplest and most evidence-backed additions for skin health. Two cups a day provides meaningful photoprotection and anti-inflammatory benefit — and supports the nervous system at the same time.'
+  },
+  zinc: {
+    color:'#854F0B',bar:'linear-gradient(90deg,#854F0B,#BA7517)',
+    eyebrow:'Anti-inflammatory nutrition',
+    title:'Zinc',
+    desc:'Zinc is one of the most important minerals for skin health — playing a critical role in oil regulation, wound healing, immune function and barrier repair. Zinc deficiency is directly and consistently linked to acne severity.',
+    points:['Zinc inhibits 5-alpha reductase — the enzyme that converts testosterone to DHT, which directly stimulates sebum overproduction.','Zinc is essential for superoxide dismutase, one of the body\'s primary antioxidant enzymes, protecting skin cells from oxidative damage.','Zinc supports tight junctions in the gut lining — directly relevant to preventing leaky gut and the systemic inflammation it causes.','Multiple studies have shown zinc supplementation to be as effective as some antibiotic treatments for acne, without antibiotic resistance.'],
+    sources:'Pumpkin seeds · oysters · beef · hemp seeds · cashews · chickpeas · lentils · quinoa · dark chocolate · tahini',
+    maggie:'Pumpkin seeds are one of my favorite skin foods — rich in zinc, omega-3s and vitamin E all in one handful. I recommend them as a daily snack for clients dealing with acne and congestion.'
+  },
+  vitaminc: {
+    color:'#993C1D',bar:'linear-gradient(90deg,#993C1D,#D85A30)',
+    eyebrow:'Anti-inflammatory nutrition',
+    title:'Vitamin C',
+    desc:'Vitamin C is the most important water-soluble antioxidant in the skin — and humans cannot produce it. Every milligram must come from diet. It is essential for collagen synthesis, barrier protection and brightening.',
+    points:['Vitamin C is a required cofactor for the enzymes that stabilize collagen structure. Without adequate vitamin C, collagen cannot be properly formed or maintained.','Skin vitamin C levels are depleted rapidly by UV exposure, pollution and stress — chronically stressed individuals have measurably lower skin vitamin C.','Dietary vitamin C has been shown to increase skin elasticity, reduce transepidermal water loss and improve fine lines in clinical studies.','Vitamin C regenerates vitamin E after it neutralizes free radicals — consuming them together amplifies the antioxidant protection of both.'],
+    sources:'Red bell peppers · yellow bell peppers · kiwi · strawberries · citrus · broccoli · papaya · Brussels sprouts · parsley · kale',
+    maggie:'Red bell peppers contain more vitamin C than oranges — and most people do not know this. Half a red bell pepper provides the full daily recommended intake. Add them raw to salads, bowls or eat as a snack.'
+  },
+  avoid: {
+    color:'#A32D2D',bar:'linear-gradient(90deg,#A32D2D,#E24B4A)',
+    eyebrow:'Foods to minimize',
+    title:'Pro-inflammatory foods',
+    desc:'Just as anti-inflammatory foods calm the skin, pro-inflammatory foods actively drive the inflammation that worsens acne, rosacea, eczema and accelerated aging.',
+    points:['Refined sugar triggers insulin spikes that stimulate sebum production and activate inflammatory pathways — directly linked to acne severity in multiple studies.','Processed seed oils are extremely high in omega-6 fatty acids, skewing the omega-3 to omega-6 ratio toward pro-inflammatory territory.','Ultra-processed foods combine refined carbohydrates, inflammatory oils and additives that disrupt the gut microbiome and drive systemic inflammation.','Excessive dairy — particularly skim milk — has been linked to acne, likely due to its IGF-1 content and effect on androgen pathways that stimulate sebum production.','Alcohol depletes zinc and antioxidants, disrupts sleep quality, increases gut permeability and raises inflammatory markers — all of which show on the skin.'],
+    sources:'The goal is not elimination but reduction. Even modest decreases in refined sugar and processed oils create measurable changes in skin inflammation within weeks.',
+    maggie:'I never ask clients to give up everything they love. I ask them to add first — add the omega-3s, add the color, add the fermented foods. When the good crowds out the bad naturally, the skin responds without the stress of restriction.'
+  }
+};
+
+function openModal(id) {
+  var d = content[id];
+  if (!d) return;
+  document.getElementById('modalBar').style.background = d.bar;
+  document.getElementById('modalEyebrow').textContent = d.eyebrow;
+  document.getElementById('modalEyebrow').style.color = d.color;
+  document.getElementById('modalTitle').textContent = d.title;
+  document.getElementById('modalTitle').style.color = d.color;
+  document.getElementById('modalDesc').textContent = d.desc;
+  var pts = document.getElementById('modalPoints');
+  pts.innerHTML = d.points.map(function(p) {
+    return '<div class="modal-point"><div class="modal-dot" style="background:'+d.color+'"></div><div class="modal-pt">'+p+'</div></div>';
+  }).join('');
+  document.getElementById('modalSources').textContent = d.sources;
+  document.getElementById('modalMaggie').textContent = d.maggie;
+  document.getElementById('modalClose').style.background = d.color;
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('card-omega3').addEventListener('click', function() { openModal('omega3'); });
+document.getElementById('card-antioxidants').addEventListener('click', function() { openModal('antioxidants'); });
+document.getElementById('card-probiotics').addEventListener('click', function() { openModal('probiotics'); });
+document.getElementById('card-polyphenols').addEventListener('click', function() { openModal('polyphenols'); });
+document.getElementById('card-zinc').addEventListener('click', function() { openModal('zinc'); });
+document.getElementById('card-vitaminc').addEventListener('click', function() { openModal('vitaminc'); });
+document.getElementById('card-avoid').addEventListener('click', function() { openModal('avoid'); });
+document.getElementById('modalClose').addEventListener('click', closeModal);
+document.getElementById('modalOverlay').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
+</script>
+</body>
+</html>
